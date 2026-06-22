@@ -7,16 +7,10 @@ if not (vim.uv or vim.loop).fs_stat(pckr_path) then
 		'git',
 		'clone',
 		"--filter=blob:none",
+		"-b",
+		"v1.1.2",
 		'https://github.com/lewis6991/pckr.nvim',
 		pckr_path
-	})
-
-	-- Pin pckr to a specific commit
-	vim.fn.system({
-		'git',
-		'reset',
-		'--hard',
-		'dcc0e2766d7a3a1911287fef7060ac07908cf376'
 	})
 end
 
@@ -41,12 +35,12 @@ end end end
 -- Plugins
 local pckr = require("pckr")
 pckr.setup {
-autoinstall = true,
-autoremove = true,
-max_jobs = 4,
-git = {
-  cmd = vim.g.git_path,
-}
+	autoinstall = true,
+	autoremove = true,
+	max_jobs = 4,
+	git = {
+	  cmd = vim.g.git_path,
+	}
 }
 
 pckr.add {
