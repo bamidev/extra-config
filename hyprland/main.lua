@@ -1,8 +1,10 @@
+debug.disable_logs = false
 
+require('lua.binds')
 
 hl.on('hyprland.start', function()
 	require('lua.plugin.hy3')
-	require('lua.binds')
+	require('lua.plugin.hy3.binds')
 	hl.exec_cmd(
 		"swayidle -w " ..
 		"timeout 300 'swaylock -f -c " .. _G.background_color .. "' " ..
