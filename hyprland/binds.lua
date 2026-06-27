@@ -1,9 +1,9 @@
 -- TODO: Take from environment variables
-local browser = 'librewolf'
+local browser = os.getenv('BROWSER')
 local file_browser = 'nautilus'
 local menu = 'wofi -n --show run'
 local shutdown = 'hyprshutdown'
-local terminal = 'alacritty'
+local terminal = os.getenv('TERMINAL')
 local print_screen = 'echo screen'
 local print_window = 'echo window'
 
