@@ -24,6 +24,6 @@ hl.bind('PRINT', hl.dsp.exec_cmd(print_screen))
 hl.bind('SUPER + SHIFT + PRINT', hl.dsp.exec_cmd(print_window))
 
 for i = 1, 10 do
-	key = i % 10
+	local key = i % 10
 	hl.bind('SUPER + ' .. key, hl.dsp.window.move({ workspace = key }))
 end

@@ -1,7 +1,6 @@
 local hy3 = hl.plugin.hy3
 
 
-
 hl.bind('SUPER + LEFT', hy3.move_focus('left'))
 hl.bind('SUPER + RIGHT', hy3.move_focus('right'))
 hl.bind('SUPER + UP', hy3.move_focus('up'))
