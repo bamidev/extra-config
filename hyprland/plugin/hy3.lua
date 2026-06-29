@@ -1,2 +1,2 @@
-require('lua.plugin.hy3.binds')
+require('lib.plugin.hy3.binds')
 
