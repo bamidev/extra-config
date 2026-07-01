@@ -52,11 +52,19 @@ end
 function resize_width(grow)
 	local active_window = hl.get_active_window()
 	local width = active_window.size.x
-	local step = resize_step - (width % resize_step)
-	local modifier = 1
-	if grow == false then modifier = -1 end
+	local step = 0
+	if grow then
+		step = resize_step - (width % resize_step)
+	else
+		local overflow = width % resize_step
+		if overflow > 0 then
+			step = -overflow
+		else
+			step = -resize_step
+		end
+	end
 
-	hl.dispatch(hl.dsp.window.resize({ x = modifier * step, y = 0, relative = true }))
+	hl.dispatch(hl.dsp.window.resize({ x = step, y = 0, relative = true }))
 end
 
 local function shrink_width()
