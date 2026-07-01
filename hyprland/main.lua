@@ -11,6 +11,10 @@ end
 
 
 hl.config({
+	debug = {
+		disable_logs = false
+	},
+
 	decoration = {
 		blur = {
 			enabled = true,
