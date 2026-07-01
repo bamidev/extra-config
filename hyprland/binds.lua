@@ -4,8 +4,9 @@ local file_browser = 'nautilus'
 local menu = 'wofi -n --show run'
 local shutdown = 'hyprshutdown'
 local terminal = os.getenv('TERMINAL')
-local print_screen = 'echo screen'
-local print_window = 'echo window'
+local print_screen = 'hyprshot -m output'
+local print_region = 'hyprshot -m region'
+local print_window = 'hyprshot -m window'
 
 
 hl.bind('SUPER + SHIFT + LEFT', hl.dsp.group.prev())
@@ -37,8 +38,9 @@ hl.bind('XF86AudioLowerVolume', hl.dsp.exec_cmd('pactl set-sink-volume @DEFAULT_
 hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd('pactl set-sink-volume @DEFAULT_SINK@ +1%'))
 hl.bind('XF86AudioMute', hl.dsp.exec_cmd('pactl set-sink-mute @DEFAULT_SINK@ toggle'))
 
-hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m region'))
-hl.bind('SHIFT + PRINT', hl.dsp.exec_cmd('hyprshot -m window'))
+hl.bind('PRINT', hl.dsp.exec_cmd(print_screen))
+hl.bind('SHIFT + PRINT', hl.dsp.exec_cmd(print_window))
+hl.bind('CTRL + PRINT', hl.dsp.exec_cmd(print_region))
 
 
 -- The size in pixels that my terminal seems to use for each character.
