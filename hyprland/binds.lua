@@ -39,3 +39,30 @@ hl.bind('XF86AudioMute', hl.dsp.exec_cmd('pactl set-sink-mute @DEFAULT_SINK@ tog
 
 hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m region'))
 hl.bind('SHIFT + PRINT', hl.dsp.exec_cmd('hyprshot -m window'))
+
+
+-- The size in pixels that my terminal seems to use for each character.
+local resize_step = 10
+
+
+local function grow_width()
+	resize_width(true)
+end
+
+function resize_width(grow)
+	local active_window = hl.get_active_window()
+	local width = active_window.size.x
+	local step = resize_step - (width % resize_step)
+	local modifier = 1
+	if grow == false then modifier = -1 end
+
+	hl.dispatch(hl.dsp.window.resize({ x = modifier * step, y = 0, relative = true }))
+end
+
+local function shrink_width()
+	resize_width(false)
+end
+
+
+hl.bind('SUPER + PERIOD', grow_width, { repeating = true })
+hl.bind('SUPER + COMMA', shrink_width, { repeating = true })
