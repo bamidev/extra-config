@@ -32,10 +32,10 @@ end
 
 
 -- Brightness & audio keys
-hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('sudo-brightness-down'))
-hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('sudo-brightness-up'))
-hl.bind('XF86AudioLowerVolume', hl.dsp.exec_cmd('pactl set-sink-volume @DEFAULT_SINK@ -1%'))
-hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd('pactl set-sink-volume @DEFAULT_SINK@ +1%'))
+hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('sudo-brightness-down'), { repeating = true })
+hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('sudo-brightness-up'), { repeating = true })
+hl.bind('XF86AudioLowerVolume', hl.dsp.exec_cmd('pactl set-sink-volume @DEFAULT_SINK@ -1%'), { repeating = true })
+hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd('pactl set-sink-volume @DEFAULT_SINK@ +1%'), { repeating = true })
 hl.bind('XF86AudioMute', hl.dsp.exec_cmd('pactl set-sink-mute @DEFAULT_SINK@ toggle'))
 
 hl.bind('PRINT', hl.dsp.exec_cmd(print_screen))
