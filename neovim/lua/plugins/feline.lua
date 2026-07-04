@@ -69,7 +69,7 @@ return {
 				bg_gray = palette.grey2[1],
 				bg_green = palette.bg_green[1],
 				bg_orange = palette.bg_yellow[1],
-				bg_purple = '#463f48', -- bg_purple doesn't exist yet in v0.3.0
+				bg_purple = palette.bg_purple[1],
 				bg_red = palette.bg_red[1],
 				bg_skyblue = palette.bg_blue[1],
 				bg_yellow = palette.bg_yellow[1],

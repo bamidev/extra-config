@@ -160,24 +160,24 @@ require('plugins.ufo'),
 },
 { "ryanoasis/vim-devicons", tag = "v0.11.0" },
 {
-  "sainnhe/everforest",
-  tag = "v0.3.0",
-  config = function()
-	if not vim.o.termguicolors then
-	  return
-	end
+	"sainnhe/everforest",
+	commit = "85a86eb62409e3ec88713bff3d1b9d7374e112e4",
+	config = function()
+		if not vim.o.termguicolors then
+		  return
+		end
 
-	if season == "winter" then
-	  vim.o.background = "dark"
-	else if season == "summer" then
-	  vim.o.background = "light"
-	else
-	  return
-	end end
-	vim.g.everforest_background = 'hard'
-	vim.g.everforest_enable_italic = true
-	vim.cmd.colorscheme("everforest")
-  end
+		if season == "winter" then
+		  vim.o.background = "dark"
+		else if season == "summer" then
+		  vim.o.background = "light"
+		else
+		  return
+		end end
+		vim.g.everforest_background = 'hard'
+		vim.g.everforest_enable_italic = true
+		vim.cmd.colorscheme("everforest")
+	end
 },
 {
   "soulis-1256/eagle.nvim",
