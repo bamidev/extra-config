@@ -12,6 +12,14 @@ end
 vim.lsp.inlay_hint.enable(true)
 
 
+-- Some manual LSP configurations
+require('lsp.basedpyright')
+require('lsp.esbonio')
+require('lsp.ltex')
+require('lsp.pylsp')
+require('lsp.ruff')
+
+-- Enable all LSP which I am using or have used
 vim.lsp.enable('basedpyright')
 vim.lsp.enable('bashls')
 vim.lsp.enable('ccls')

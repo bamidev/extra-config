@@ -17,3 +17,4 @@ vim.lsp.config('pylsp', {
           end
       }
 })
+

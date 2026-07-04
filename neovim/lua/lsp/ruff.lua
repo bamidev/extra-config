@@ -4,7 +4,8 @@ vim.lsp.config('ruff', {
 		settings = {
 			configuration = '~/.config/ruff.toml',
 			configurationPreference = 'filesystemFirst',
-	  },
+		},
 	},
 	capabilities = require('lsp.capabilities')
 })
+
