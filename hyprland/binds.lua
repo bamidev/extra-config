@@ -17,6 +17,7 @@ hl.bind('SUPER + SHIFT + RIGHT', hl.dsp.group.next())
 hl.bind('SUPER + SHIFT + SPACE', hl.dsp.window.float())
 
 hl.bind('SUPER + RETURN', hl.dsp.exec_cmd(terminal))
+hl.bind('SUPER + T', hl.dsp.exec_cmd(terminal))
 hl.bind('SUPER + W', hl.dsp.exec_cmd(browser))
 hl.bind('SUPER + D', hl.dsp.exec_cmd(menu))
 hl.bind('SUPER + F', hl.dsp.exec_cmd(file_browser))
