@@ -193,5 +193,11 @@ require('plugins.ufo'),
   end,
 },
 { "uga-rosa/utf8.nvim", commit = "954cbbadabe5cd19f202e918fec191d64eea7766" },
+	{
+		'windwp/nvim-autopairs',
+		config = function ()
+			require("nvim-autopairs").setup {}
+		end
+	}
 }
 pckr.add(require('user-plugins'))
